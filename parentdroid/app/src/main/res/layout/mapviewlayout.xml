@@ -3,20 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+
     <TextView
         android:id="@+id/txmapview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mapviewtopic"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <com.google.android.maps.MapView
-        android:id="@+id/mapView"
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="432dp"
-        android:apiKey="0euofdvFuKjXG9LJbPE8LlbqzLwK1Yp8Bzioajg"
-        android:clickable="true"
-        android:enabled="true" />
+        android:layout_height="432dp" />
 
 </LinearLayout>
