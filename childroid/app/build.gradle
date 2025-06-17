@@ -7,10 +7,11 @@ android {
     
     defaultConfig {
         applicationId "com.childroid"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -27,8 +28,14 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'lib', include: ['*.jar'])
+//    implementation files('lib/activation.jar')
+//    implementation files('lib/additionnal.jar')
+//    implementation files('lib/mail.jar')
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-} 
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+}
